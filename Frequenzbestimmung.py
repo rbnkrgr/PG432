@@ -63,14 +63,14 @@ while (number <= number_max): #Die Dateien werden durchgegangen.
     for d in events:
 	    print d
 
-    print 'Gemessene Abstaende zwischen zwei Ereignissen in Sekunden:\n'
+    print '\nGemessene Abstaende zwischen zwei Ereignissen in Sekunden:\n'
     for z in v:
 	    print z
 
     ### Plot wird erstellt. ###
     plt.plot(events[0:-1],v,color='green', linestyle='dashed', marker='x',markerfacecolor='blue', markersize=12)
     plt.xlabel('Zeit in Sekunden')
-    plt.ylabel('Periodendauer in Sekungen x2')
+    plt.ylabel('Periodendauer in Sekunden (2 Ereignisse pro Umlauf)')
     plt.grid(True)
     plt.savefig(str(number)+'.png') #Plot wird gespeichert.
     plt.clf()
